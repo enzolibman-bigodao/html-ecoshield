@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #0d9488;    
+    --primary-hover: #0f766e;
+    --bg-light: #f8fafc;         
+    --bg-alt: #f1f5f9;          
+    --text-main: #1e293b;     
+    --text-muted: #64748b;     
+    --white: #ffffff;
+    --badge-bg: #ccfbf1;
+    --badge-text: #115e59;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+main {
+    margin-top: 70px;
+}
+
+.section {
+    min-height: 60vh;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--white);
+}
+
+.section-alt {
+    background-color: var(--bg-alt);
+}
+
+
+.section-badge {
+    display: inline-block;
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    position: relative;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+
+.footer {
+    background-color: var(--text-main);
+    color: var(--white);
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    color: #94a3b8;
+}
+
+.footer .developer {
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    main {
+        margin-top: 120px;
+    }
+    
+    .section {
+        padding: 60px 5%;
+    }
+}
